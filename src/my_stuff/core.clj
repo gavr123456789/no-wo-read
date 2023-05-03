@@ -14,22 +14,15 @@
                       (json/read-str (slurp filename))
                       {}))
 
-(defn get-translation [info]
-  (get info "translation"))
-
-
-(defn save-data []
-  (spit filename (json/write-str data-from-file {:escape-unicode false})))
-
-(defn save-data2 [data]
+(defn save-data [data]
   (spit filename (json/write-str data {:escape-unicode false})))
 
+;; returns 3 thing: [eng-word attempts ru-word]
 (defn get-least-attempts [data]
   (first (sort-by second (for [[word info] data]
-                           [word (get info "attempts") (get-translation info)]))))
+                           [word (get info "attempts") (get info "translation")]))))
 
-
-(defn- update-attempts2 [data word]
+(defn- update-attempts [data word]
   (update-in data [word "attempts"] inc))
 
 
@@ -48,10 +41,10 @@
       (cond
         (= word translation) (do
                                (println "Valid answer!")
-                               (recur (update-attempts2 data need-translate)))
+                               (recur (update-attempts data need-translate)))
         (= word "exit") (do
                           (println "Exiting")
-                          (save-data2 data))
+                          (save-data data))
         :else (do
                 (println "Invalid answer. Please try again.")
                 (recur data))))))
