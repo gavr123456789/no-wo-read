@@ -24,6 +24,7 @@ lein run
 ```
 
 ## Examples
+```
 Translate the word: house 5
 what
 Invalid answer. Please try again.
@@ -34,7 +35,7 @@ Translate the word: eagle 5
 орел
 Valid answer!
 Translate the word: cat 6
-
+```
 ## License
 
 Copyright © 2023 gavr132456789
