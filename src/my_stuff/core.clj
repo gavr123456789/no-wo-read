@@ -54,7 +54,6 @@
                           (save-data2 data))
         :else (do
                 (println "Invalid answer. Please try again.")
-                (save-data)
                 (recur data))))))
 
 (defn -main []
