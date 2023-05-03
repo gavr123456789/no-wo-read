@@ -1,1 +1,18 @@
-{"cat":{"translation":"кот","attempts":6},"house":{"translation":"дом","attempts":5},"eagle":{"translation":"орел","attempts":5}}
+{
+  "cohesion": {
+    "translation": "сплоченность",
+    "attempts": 0
+  },
+  "savage": {
+    "translation": "дикарь",
+    "attempts": 0
+  },
+  "considerate": {
+    "translation": "деликатный",
+    "attempts": 0
+  },
+  "pave": {
+    "translation": "прокладывать",
+    "attempts": 0
+  }
+}

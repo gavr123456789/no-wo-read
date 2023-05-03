@@ -23,6 +23,8 @@ yay -S lein
 lein run
 ```
 
+Type exit to exit and save attemts to json
+
 ## Examples
 ```
 Translate the word: house 5
